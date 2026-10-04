@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FinanceShoulder – Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; max-width: 46rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.1rem; margin-top: 2rem; }
+  dt { font-weight: 600; margin-top: .6rem; } dd { margin: 0 0 0 1rem; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy – FinanceShoulder</h1>
+<p><em>Last updated: 4 October 2026</em></p>
+
+<h2>1. Who is responsible</h2>
+<p>FinanceShoulder is a private, self-hosted personal finance application developed and operated by:</p>
+<p>Kristian Mörling<br>Trier, Germany<br>Email: <a href="mailto:kristian.morling@gmail.com">kristian.morling@gmail.com</a></p>
+<p>The application is used solely by its operator for his own household finances. It is not offered to, marketed to, or usable by any other person, and no user accounts exist.</p>
+
+<h2>2. What data is processed</h2>
+<p>When the operator explicitly connects his own bank account, the application retrieves account information through Enable Banking Oy, a licensed account information service provider (AISP):</p>
+<dl>
+  <dt>Account data</dt><dd>account identifier (IBAN), account name, currency.</dd>
+  <dt>Transaction data</dt><dd>booking and value dates, amounts, currency, counterparty name, payment reference and remittance information.</dd>
+</dl>
+<p>No data about any other person is collected. Counterparty names contained in the operator's own transactions are processed only as part of those transactions.</p>
+
+<h2>3. Purpose and legal basis</h2>
+<p>The data is used exclusively to categorise and analyse the operator's own spending. The legal basis is consent (Art. 6(1)(a) GDPR), given by the operator himself in his bank's strong authentication flow, and the processing is carried out in the course of a purely personal household activity.</p>
+
+<h2>4. Where the data is stored</h2>
+<p>All data is stored locally in a SQLite database file on the operator's own computer. There is no hosted backend, no cloud database and no backup to any third-party service.</p>
+
+<h2>5. Third parties</h2>
+<dl>
+  <dt>Enable Banking Oy (Finland)</dt><dd>provides the regulated access to the bank account. Their processing is governed by their own privacy policy and by the PSD2 consent granted in the bank.</dd>
+  <dt>Google (Gemini API)</dt><dd>transaction descriptions and merchant names of uncategorised transactions may be sent to Google's Gemini API to suggest a spending category. No account numbers, balances or identity data are sent. This feature can be disabled by removing the API key from the configuration.</dd>
+</dl>
+<p>No data is sold, shared for advertising, or transferred to any other recipient.</p>
+
+<h2>6. Retention</h2>
+<p>Transaction data remains in the local database until the operator deletes it. The bank consent is valid for a maximum of 180 days, after which it expires unless renewed, and it can be revoked at any time in the bank's app or by deleting the session in the application.</p>
+
+<h2>7. Cookies and tracking</h2>
+<p>The application sets no cookies, uses no analytics and contains no tracking of any kind. These policy pages are static and set no cookies either.</p>
+
+<h2>8. Rights</h2>
+<p>As the sole data subject is the operator himself, GDPR data subject rights (access, rectification, erasure, restriction, portability, objection) are exercised directly by deleting or exporting the local database. Questions can be sent to the email address above. A complaint may be lodged with a supervisory authority, in Germany the data protection authority of Rhineland-Palatinate.</p>
+
+<footer>FinanceShoulder is free software published under the MIT licence. <a href="terms.html">Terms of use</a></footer>
+</body>
+</html>
