@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FinanceShoulder – bank connection</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; max-width: 36rem; margin: 5rem auto; padding: 0 1rem; line-height: 1.6; }
+  code { display: block; word-break: break-all; padding: .6rem .8rem; border-radius: .4rem; background: rgba(128,128,128,.15); font-size: .85rem; margin: 1rem 0; }
+</style>
+</head>
+<body>
+<h1 id="head">Bank connected</h1>
+<p id="msg">Sending you back to FinanceShoulder…</p>
+<code id="code" hidden></code>
+<p><a id="link" href="#" hidden>Open FinanceShoulder manually</a></p>
+<script>
+  var q = new URLSearchParams(location.search);
+  var code = q.get("code") || "";
+  var err = q.get("error") || q.get("error_description");
+  var target = "http://localhost:5000/api/bank/callback" + location.search;
+  var msg = document.getElementById("msg");
+  if (code) {
+    var c = document.getElementById("code");
+    c.textContent = code; c.hidden = false;
+    var l = document.getElementById("link");
+    l.href = target; l.hidden = false;
+    setTimeout(function () { location.replace(target); }, 1200);
+  } else {
+    document.getElementById("head").textContent = "No authorisation code";
+    msg.textContent = err ? ("The bank returned an error: " + err) : "This page is the redirect target of the FinanceShoulder application. There is nothing to see here without an authorisation code.";
+  }
+</script>
+</body>
+</html>
